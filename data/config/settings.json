@@ -19,8 +19,8 @@
 	"adminSpawnTier1":20,
 	"adminSpawnTier2":15,
 	"adminSpawnTier3":15,
-	"adminSpawnTier4":100,
-	"adminSpawnTier5":105,
+	"adminSpawnTier4":10,
+	"adminSpawnTier5":5,
 
 	# DO NOT SET TIER NUMBERS TO BE LOWER THAN ITS LOWER TIER OR THERE WILL BE CONSEQUENCES, DON'T EVEN BOTHER WITH NEGATIVE NUMBERS.
 	"tier1StationOfficerLevel":8,
