@@ -1,6 +1,6 @@
 id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order
 techmining,Tech-Mining,30,45,,2,,,"techmining, industry, industrial",,graphics/icons/industry/techmining.png,data.scripts.TechMining,"Techmining is the motley art of recovering valuable artifacts from Domain ruins. Requires special tools to deal with unique hazards and expert judgement to know where to look for a good haul of baubles. The oldest techminers are a strange lot, clutching luck-charms and refusing to work without their rituals.",400
-commerce,Commerce,90,90,2,3,,,"industry, urban",,graphics/icons/industry/commerce.png,com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter,"Regulations, grants, and infrastructure to encourage thriving independent trade.",1950
+commerce,Commerce,90,90,1,3,,,"industry, urban",,graphics/icons/industry/commerce.png,com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenterGD,"Regulations, grants, and infrastructure to encourage thriving independent trade. Granting a Free Port here may allow a stockpile of certain commodities.",1950
 orbitalstation,Orbital Station - Low Tech,50,90,,3,,battlestation,"station, sub_item, unraidable, structure","{
 radius:55,
 variant:station1_Standard,

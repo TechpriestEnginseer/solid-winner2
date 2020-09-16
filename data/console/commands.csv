@@ -1,0 +1,11 @@
+command,class,tags,syntax,help
+# Command: what the player enters to use your custom command
+# Class: points towards the command's script, which should implement BaseCommand
+# Tags: used by the Help command to find specific types of commands. Example tags:
+#  Console - system-level commands such as Help or Status, will work everywhere
+#  Campaign/Combat - this command only works in these contexts
+#  A mod-specific tag - include your mod as a tag so Help can differentiate them! The console mod uses the "core" tag, so please don't use that tag in your mod
+# Syntax: the syntax pattern for your command. <> denotes a required field, [] an optional one. Ex: "addcrew <amount> [optionalLevel]"
+# Help: what the player is shown when they enter "help <command>". The syntax line will be shown by help as well, so you don't need to include it again.
+#
+AddAdminBC,data.console.commands.AddAdminBC,"core,campaign",addadmin [optionalTier] [optionalFaction] [optionalName],"Adds an administrator to your fleet. You can optionally specify his or her tier (0-5), and faction (currently only affects name/portrait). If all of these are left empty, a tier 0 administrator of the player faction will be created."

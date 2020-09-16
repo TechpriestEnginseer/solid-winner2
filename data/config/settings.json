@@ -29,5 +29,6 @@
 	"tierACStationOfficerLevel":29,
 
 	"techMiningDecay":0.90, # monthly multiplier reducing effectiveness of tech-mining ops
+	"techMiningDecayMax":1.00, # monthly multiplier reducing effectiveness of tech-mining ops
 	"techminingACbonus":1.15, # how good that alpha core is
 }
