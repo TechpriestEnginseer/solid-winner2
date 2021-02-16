@@ -1,7 +1,6 @@
 {
 	"altMouseMoveToMassTransfer":true,
-	
-	"adminMaxHireable":30,
+
 	"adminHireTier0":1000,
 	"adminHireTier1":2000,
 	"adminHireTier2":4000,
@@ -14,11 +13,11 @@
 	"adminSalaryTier3":15000,
 	"adminSalaryTier4":20000,
 	"adminSalaryTier5":25000,
-	#This changes how much the admin should spawn rate.. give Tier 5 a higher spawn rate to see them spawn more. Simple as.
-	"adminSpawnTier0":35,
+	#This changes how much the admin should spawn rate.. give Tier 5 a higher spawn rate to see them spawn more. Simple as. In according to 0.95, I also modified its tier spawn rate as well.
+	"adminSpawnTier0":25,
 	"adminSpawnTier1":20,
-	"adminSpawnTier2":15,
-	"adminSpawnTier3":15,
+	"adminSpawnTier2":20,
+	"adminSpawnTier3":20,
 	"adminSpawnTier4":10,
 	"adminSpawnTier5":5,
 

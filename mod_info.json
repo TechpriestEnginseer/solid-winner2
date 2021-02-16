@@ -3,7 +3,7 @@
     "name": "Better Colonies",
     "author": "Techpriest",
     "utility": "false",
-    "version": "1.5",
+    "version": "1.51",
     "description": "QoL for Late Game Colony Management. Simple as.",
     "gameVersion": "0.9.1a",
 	"jars":["jar/Bettercolonies.jar"],
