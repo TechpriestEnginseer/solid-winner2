@@ -52,11 +52,11 @@ public class AddAdminBC implements BaseCommand
 
         if (!isInteger(tmp[0]))
         {
-            Console.showMessage("Error: admin tier must be a whole number from 0 to 5!");
+            Console.showMessage("Error: admin tier must be a whole number from 0 to 3!");
             return CommandResult.BAD_SYNTAX;
         }
 
-        final int tier = Math.min(5, Math.max(0, Integer.parseInt(tmp[0])));
+        final int tier = Math.min(3, Math.max(0, Integer.parseInt(tmp[0])));
 
         final FactionAPI faction = findBestFactionMatch(tmp[1]);
         if (faction == null)
