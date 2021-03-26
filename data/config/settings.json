@@ -1,33 +1,16 @@
 {
 	"altMouseMoveToMassTransfer":true,
-
-	"adminHireTier0":1000,
-	"adminHireTier1":2000,
-	"adminHireTier2":4000,
-	"adminHireTier3":6000,
-	"adminHireTier4":8000,
-	"adminHireTier5":10000,
+	"adminHireTier0":5000,
+	"adminHireTier1":10000,
+	"adminHireTier2":50000,
+    "adminHireTier3":100000,
 	"adminSalaryTier0":2500,
 	"adminSalaryTier1":5000,
-	"adminSalaryTier2":10000,
-	"adminSalaryTier3":15000,
-	"adminSalaryTier4":20000,
-	"adminSalaryTier5":25000,
+	"adminSalaryTier2":25000,
+	"adminSalaryTier3":50000,
 	#This changes how much the admin should spawn rate.. give Tier 5 a higher spawn rate to see them spawn more. Simple as. In according to 0.95, I also modified its tier spawn rate as well.
-	"adminSpawnTier0":25,
-	"adminSpawnTier1":20,
-	"adminSpawnTier2":20,
-	"adminSpawnTier3":20,
-	"adminSpawnTier4":10,
-	"adminSpawnTier5":5,
-
-	# DO NOT SET TIER NUMBERS TO BE LOWER THAN ITS LOWER TIER OR THERE WILL BE CONSEQUENCES, DON'T EVEN BOTHER WITH NEGATIVE NUMBERS.
-	"tier1StationOfficerLevel":8,
-	"tier2StationOfficerLevel":17,
-	"tier3StationOfficerLevel":26,
-	"tierACStationOfficerLevel":29,
-
-	"techMiningDecay":0.90, # monthly multiplier reducing effectiveness of tech-mining ops
-	"techMiningDecayMax":1.00, # monthly multiplier reducing effectiveness of tech-mining ops
-	"techminingACbonus":1.15, # how good that alpha core is
+	"adminSpawnTier0":20,
+	"adminSpawnTier1":65,
+	"adminSpawnTier2":10,
+	"adminSpawnTier3":5,
 }
