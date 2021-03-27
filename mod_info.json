@@ -5,7 +5,7 @@
     "utility": "false",
     "version": "1.6",
     "description": "QoL for Late Game Colony Management. Simple as.",
-    "gameVersion": "0.95a-RC8",
+    "gameVersion": "0.95a-RC9",
 	"jars":["jar/Bettercolonies.jar"],
 	"modPlugin": "data.scripts.GDModPlugin",
 }
