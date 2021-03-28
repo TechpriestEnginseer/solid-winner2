@@ -3,9 +3,9 @@
     "name": "Better Colonies",
     "author": "Techpriest",
     "utility": "false",
-    "version": "1.6",
+    "version": "1.61",
     "description": "QoL for Late Game Colony Management. Simple as.",
-    "gameVersion": "0.95a-RC9",
+    "gameVersion": "0.95a-RC10",
 	"jars":["jar/Bettercolonies.jar"],
 	"modPlugin": "data.scripts.GDModPlugin",
 }
