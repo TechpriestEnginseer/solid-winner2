@@ -1,5 +1,7 @@
 {
 	"altMouseMoveToMassTransfer":true,
+	"DoesBCChangeIndustry":true,
+	
 	"adminHireTier0":5000,
 	"adminHireTier1":10000,
 	"adminHireTier2":50000,

@@ -3,9 +3,12 @@
     "name": "Better Colonies",
     "author": "Techpriest",
     "utility": "false",
-    "version": "1.61",
+    "version": "1.63",
     "description": "QoL for Late Game Colony Management. Simple as.",
-    "gameVersion": "0.95a-RC10",
+    "gameVersion": "0.95a-RC14",
 	"jars":["jar/Bettercolonies.jar"],
+	"dependencies": [
+    {"id": "lw_lazylib", "name": "LazyLib"},
+  ],
 	"modPlugin": "data.scripts.GDModPlugin",
 }
