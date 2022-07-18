@@ -5,8 +5,9 @@
 	"modVersion":
 	{
 		"major":1,
-		"minor":6,
-		"patch":3,
+		"minor":7,
+		#"patch":4,
 	},
-	"starsectorVersion":".95a"
+	"starsectorVersion":"0.95.1a-RC6",
+	"directDownloadURL":"https://github.com/TechpriestEnginseer/solid-winner2/releases/download/1.7/Better.Colonies.zip",
 }

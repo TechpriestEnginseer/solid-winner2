@@ -1,0 +1,2 @@
+name,id,planetary,decivRemove,script,desc,icon,order
+Luddic Subpopulation,bc_luddicfaith,,TRUE,com.fs.starfarer.api.impl.campaign.econ.LuddicFaith,"The polity of $market has embraced teachings of the Luddic Church. Conforming to the teachings grant bonuses, swaying grants penalties.",graphics/icons/markets/luddic_majority.png,142
