@@ -92,12 +92,18 @@ AddText ""This is a permanent decision on your market. You cannot withdraw your 
 
 
 ","""An official and permanent pledge to the good people of $market in constructing a shrine to spread the teachings of Ludd here."" You begin to listen...","bc_luddicfaith3a:""I will honor that pledge.""
-bc_luddicfaith3b:""I cannot honor that pledge.""",
+bc_luddicfaith3b:""I cannot honor that pledge.""
+bc_luddicfaith3c:""Look I don't know what you're talking about.""
+",
 bc_luddicfaithbar_option3a,DialogOptionSelected,$option == bc_luddicfaith3a,"bc_generateperson
 FireBest bc_luddicreputationgain
 UpdateMemory","Enthusiasm follows the conversation. ""The road is a difficult one. You are the shepherd to your flock. Teach them well and virtue will follow. Sway them and vice will follow. Blessing of Ludd upon you.""","bc_luddic_continue:""Blessing upon you too.""",
 bc_luddicfaithbar_option3a1,bc_luddicreputationgain,,AdjustRep luddic_church FRIENDLY 10,,,
 bc_luddicfaithbar_option3a2,bc_luddicreputationgain,RepLTE luddic_church INHOSPITABLE,AdjustRep luddic_church NEUTRAL 100,,,
 bc_luddicfaithbar_option3b,DialogOptionSelected,$option == bc_luddicfaith3b,$global.bc_luddicfaith = true 180,"Disappointment follows the conversation. ""The road is a difficult one. I cannot compel you or your flock to follow the teachings of Ludd if they do not wish so. I can only pity for the possible sufferings that will occur. Blessing of Ludd upon you.""",bc_luddic_continue:Continue,
+bc_luddicfaithbar_option3c,DialogOptionSelected,$option == bc_luddicfaith3c,SetEnabled bc_luddicfaith3c false ,"A pause is given. ""I will simplify for your sake then. Pledging to enact a shrine will bring pilgrims who will boost the income of your market here in addition to population growth and stability. Some of the gifts the Church offers will depend on how cooperative you have been with them and in some cases we will assign a garrison here to overlook the shrine's protection."" 
+
+A serious tone presents itself. ""If you however find yourself at odds with the Church or some of the shrine's followers suspect you have been counterproductive with Ludd's teachings, let's say polluting the sweet atmosphere, being loose with border security, or installing agents of evil. There will be consequences.""",,
 bc_luddicfaithbar_continue,DialogOptionSelected,$option == bc_luddic_continue,"$option = marketVisitBar
+$global.bc_luddicfaith = true 180
 FireBest DialogOptionSelected",You head back to regular bar duties as the meeting is concluded.,,

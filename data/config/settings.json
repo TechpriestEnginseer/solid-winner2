@@ -2,6 +2,11 @@
 	"altMouseMoveToMassTransfer":true, #(default: false in vanilla, but I like it enough to be true)
 	#"maxColonySize":6, # maximum size to which a player colony can grow (delete the # in front of "maxColonySize" to change colony size, this is a vanilla setting and might be changed by other mods!)
 	
+	"BCAutoImproveIndustry": true, #vanilla factions will auto-improve industries with SP over time (default: true)
+	"BCLoseSPImprovements": true, #Only for Nex, invasions will unimprove industries that were disrupted at the end of an invasion (default: true)
+	"BCIgnoreFactionWhiteflag": false, #Makes ALL alive markets be eligible for SP Improvements regardless. (default: false)
+	"BCDebugText": false, #for me unless you want to know what industry got improved (default: false)
+	
 	"BCChangeIndustrySize":true, #at size 9 and 10, this will increase industry size by 1. (default: true)
 	"BCCryosanctum": false, #enable this to allow cryosanctum to be constructed (default: false)
 }
