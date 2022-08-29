@@ -144,7 +144,7 @@ SetTextHighlightColors hColor
 SetTextHighlights 50,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
-SetTextHighlights $player.creditsStr","An order can be given to strip-search the ruins to dust. The crew will demand hazard pay and overtime, while the machines will be worked and stressed to its core. Most importantly, it'll be done in a day. Of course, we can be undermanned and undermachined, but the results won't be pretty.","5:bc_salExplore2:Issue the hazard and overtime pay.
+SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
 100:bc_salRuins_leave:Never mind",
 bc_salRuins_widespread2,DialogOptionSelected,"$option == bc_salExplore
 $market.isSurveyed
@@ -163,7 +163,7 @@ SetTextHighlightColors hColor
 SetTextHighlights 100,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
-SetTextHighlights $player.creditsStr","An order can be given to strip-search the ruins to dust. The crew will demand hazard pay and overtime, while the machines will be worked and stressed to its core. Most importantly, it'll be done in a day. Of course, we can be undermanned and undermachined, but the results won't be pretty.","5:bc_salExplore2:Issue the hazard and overtime pay.
+SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
 100:bc_salRuins_leave:Never mind",
 bc_salRuins_extensive2,DialogOptionSelected,"$option == bc_salExplore
 $market.isSurveyed
@@ -182,7 +182,7 @@ SetTextHighlightColors hColor
 SetTextHighlights 200,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
-SetTextHighlights $player.creditsStr","An order can be given to strip-search the ruins to dust. The crew will demand hazard pay and overtime, while the machines will be worked and stressed to its core. Most importantly, it'll be done in a day. Of course, we can be undermanned and undermachined, but the results won't be pretty.","5:bc_salExplore2:Issue the hazard and overtime pay.
+SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
 100:bc_salRuins_leave:Never mind",
 bc_salRuins_vast2,DialogOptionSelected,"$option == bc_salExplore
 $market.isSurveyed
@@ -201,7 +201,7 @@ SetTextHighlightColors hColor
 SetTextHighlights 500,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
-SetTextHighlights $player.creditsStr","An order can be given to strip-search the ruins to dust. The crew will demand hazard pay and overtime, while the machines will be worked and stressed to its core. Most importantly, it'll be done in a day. Of course, we can be undermanned and undermachined, but the results won't be pretty.","5:bc_salExplore2:Issue the hazard and overtime pay.
+SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
 100:bc_salRuins_leave:Never mind",
 bc_salRuins_check,bc_DisableRuinsExploreIfNeeded,$player.credits < $bc_credits,"SetTooltip bc_salExplore2 ""You need at least $bc_credits credits.""
 SetTooltipHighlightColors bc_salExplore2 hColor
@@ -224,8 +224,11 @@ $market.core_techMiningMult < 1","SetTooltip bc_salExplore2 ""Your team report t
 SetEnabled bc_salExplore2 false",,,
 bc_salRuins_confirm,DialogOptionSelected,$option == bc_salExplore2,"AddRemoveCommodity credits -$bc_credits true
 bc_techmine $bc_ruins
-$salvageLeaveText = ""I just wanted it gone, no loot for me.""
-FireBest bc_RuinsExploreIfNeeded","The pay delivered, the order issued. ""Not a single ruin is to be found here.""",5:salExplore:Continue,
+$salvageLeaveText = ""I wanted it gone, no loot for me.""
+FireBest bc_RuinsExploreIfNeeded
+UpdateMemory","The pay delivered, the order issued. ""Not a single ruin is to be found here.""",5:bc_salExplore3:Continue,
+bc_salRuins_confirm2,DialogOptionSelected,$option == bc_salExplore3,"SalvageEntity showCost
+FireAll PopulateSalvageOptions2",,,
 bc_salRuins_check4,bc_RuinsExploreIfNeeded,"$bc_factionstring != null
 $bc_factionid != null",AdjustRep $bc_factionid HOSTILE -100,,,
 bc_salRuins_leave,DialogOptionSelected,$option == bc_salRuins_leave,FireAll PopulateOptions,,,

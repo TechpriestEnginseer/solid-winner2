@@ -4,9 +4,10 @@
 	
 	
 	"BCAutoImproveIndustry": true, #vanilla factions will auto-improve industries with SP over time (default: true)
-	"BCAgeOfInnovation": 0.1, #chance every month to spawn an Age of Innovation that will attempt to improve industries. (default: this translates to 10%)
-	"BCInnovatedDecentralized": 0.02, #chance indies, pathers, pirates and other decentralized faction will improve. (default: this translates to 1% of the Age of Innovation chance)
-	"BCInnovatedCentralized": 0.05, #chance every faction to improve industries. (default: this translates to 2.5% of the Age of Innovation chance)
+	"BCAgeOfInnovation": 0.2, #chance every month to spawn an Age of Innovation that will attempt to improve industries. (default: this translates to 20%)
+	"BCInnovatedDecentralized": 0.02, #chance indies, pathers, pirates and other decentralized faction will improve. (default: this translates to 2% during an Age of Innovation chance)
+	"BCInnovatedCentralized": 0.05, #chance every faction to improve industries. (default: this translates to 5% during an Age of Innovation chance)
+	#There is something to note, all the multipliers here scale with the market's size for calculation
 	"BCIgnoreFactionWhiteflag": false, #Makes ALL alive markets be eligible for SP Improvements regardless. (default: false)
 	"BCIntelText": true, #spawns an intel when you want to know what industry got improved on NPC markets (default: true)
 	
