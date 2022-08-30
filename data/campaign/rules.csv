@@ -107,6 +107,7 @@ bc_luddicfaithbar_option3c,DialogOptionSelected,$option == bc_luddicfaith3c,SetE
 
 A serious tone presents itself. ""If you however find yourself at odds with the Church or some of the shrine's followers suspect you have been counterproductive with Ludd's teachings, let's say polluting the sweet atmosphere, being loose with border security, or installing agents of evil. There will be consequences.""",,
 bc_luddicfaithbar_continue,DialogOptionSelected,$option == bc_luddic_continue,"$option = marketVisitBar
+$market.bc_luddicfaith = true 365
 FireBest DialogOptionSelected",You head back to regular bar duties as the meeting is concluded.,,
 ,,,,,,
 # salvage operations on planets with ruins,,,,,,
