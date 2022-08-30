@@ -22,7 +22,7 @@
 		"SPDescription":"• %s has improved %s!", #• $marketname has improved $industryname!
 		"SPNotificationReminder":"Not all modded factions will support the Age of Innovation. You have BCIgnoreFactionWhiteflag set to false! You can request your faction mod author to whitelist this feature or enable the flag in setting.json of this mod folder!",
 		
-		"Techmine1":"Crew & machinery: recommended (available)", #option to tech-strip
+		"Techmine1":"Crew & machinery: required (available)", #option to tech-strip
 		"Techmine2":"Marines: required (available)", #used to fight decivilization subpopulation when tech-stripping
 		
 		"LuddicPatrol1":"patroling ", #patroling $name

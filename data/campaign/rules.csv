@@ -114,19 +114,19 @@ FireBest DialogOptionSelected",You head back to regular bar duties as the meetin
 bc_salRuins_scattered,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_scattered
-$market.ruinsExplored",FireAll DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
+$market.ruinsExplored",FireAll bc_DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
 bc_salRuins_widespread,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_widespread
-$market.ruinsExplored",FireAll DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
+$market.ruinsExplored",FireAll bc_DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
 bc_salRuins_extensive,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_extensive
-$market.ruinsExplored",FireBest DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
+$market.ruinsExplored",FireAll bc_DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
 bc_salRuins_vast,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_vast
-$market.ruinsExplored",FireAll DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
+$market.ruinsExplored",FireAll bc_DisableRuinsExploreIfNeeded2,,5:bc_salExplore:Propose to 'remove' the ruins,
 bc_salRuins_hostileNearby,bc_DisableRuinsExploreIfNeeded2,HostileFleetNearbyAndAware,SetEnabled bc_salExplore false,"A nearby hostile fleet is tracking your movements, making exploration of the planet impossible.",,
 bc_salRuins_scattered2,DialogOptionSelected,"$option == bc_salExplore
 $market.isSurveyed
@@ -137,12 +137,12 @@ $market.ruinsExplored
 $salvageSpecId = bc_ruins_scattered
 SetStoryOption bc_salExplore2 1 noRepPenaltyRaid ui_char_spent_story_point_industry ""Exploited the scattered ruins""
 bc_techmine 500 160
-$bc_credits = 50,000 0
+$bc_credits = 25,000 0
 $bc_ruins = ruins_scattered 0
 FireAll bc_DisableRuinsExploreIfNeeded
-AddText ""This procedure will require 50,000 credits.""
+AddText ""This procedure will require 25,000 credits.""
 SetTextHighlightColors hColor
-SetTextHighlights 50,000
+SetTextHighlights 25,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
@@ -156,12 +156,12 @@ $market.ruinsExplored
 $salvageSpecId = bc_ruins_widespread
 SetStoryOption bc_salExplore2 2 noRepPenaltyRaid ui_char_spent_story_point_industry ""Exploited the widespread ruins""
 bc_techmine 1000 330
-$bc_credits = 100,000 0
+$bc_credits = 50,000 0
 $bc_ruins = ruins_widespread 0
 FireAll bc_DisableRuinsExploreIfNeeded
-AddText ""This procedure will require 100,000 credits.""
+AddText ""This procedure will require 50,000 credits.""
 SetTextHighlightColors hColor
-SetTextHighlights 100,000
+SetTextHighlights 50,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
@@ -175,12 +175,12 @@ $market.ruinsExplored
 $salvageSpecId = bc_ruins_extensive
 SetStoryOption bc_salExplore2 3 historianBP ui_char_spent_story_point_industry ""Exploited the extensive ruins""
 bc_techmine 1500 500
-$bc_credits = 200,000 0
+$bc_credits = 100,000 0
 $bc_ruins = ruins_extensive 0
 FireAll bc_DisableRuinsExploreIfNeeded
-AddText ""This procedure will require 200,000 credits.""
+AddText ""This procedure will require 100,000 credits.""
 SetTextHighlightColors hColor
-SetTextHighlights 200,000
+SetTextHighlights 100,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
@@ -194,16 +194,24 @@ $market.ruinsExplored
 $salvageSpecId = bc_ruins_vast
 SetStoryOption bc_salExplore2 5 historianBP ui_char_spent_story_point_industry ""Exploited the vast ruins""
 bc_techmine 2000 660
-$bc_credits = 500,000 0
+$bc_credits = 200,000 0
 $bc_ruins = ruins_vast 0
 FireAll bc_DisableRuinsExploreIfNeeded
-AddText ""This procedure will require 500,000 credits.""
+AddText ""This procedure will require 200,000 credits.""
 SetTextHighlightColors hColor
-SetTextHighlights 500,000
+SetTextHighlights 200,000
 AddText ""You have $player.creditsStr credits available.""
 SetTextHighlightColors hColor
 SetTextHighlights $player.creditsStr","An order to strip search the ruins to dust can be issued. While the crew might demand hazard pay and overtime compensation and the machines be stressed to their absolute limit, it can be done in only a day. Running this operation undermanned or underequipped will result in less-than-pretty results.","5:bc_salExplore2:Issue the hazard and overtime pay.
 100:bc_salRuins_leave:Never mind",
+bc_salRuins_check3a,bc_DisableRuinsExploreIfNeeded,$player.machinery < $bc_heavymachinery,"SetTooltip bc_salExplore2 ""You need at least $bc_heavymachinery machinery.""
+SetTooltipHighlightColors bc_salExplore2 hColor
+SetTooltipHighlights bc_salExplore2 $bc_heavymachinery
+SetEnabled bc_salExplore2 false",,,
+bc_salRuins_check3b,bc_DisableRuinsExploreIfNeeded,$player.crew < $bc_crews,"SetTooltip bc_salExplore2 ""You need at least $bc_crews crews.""
+SetTooltipHighlightColors bc_salExplore2 hColor
+SetTooltipHighlights bc_salExplore2 $bc_crews
+SetEnabled bc_salExplore2 false",,,
 bc_salRuins_check,bc_DisableRuinsExploreIfNeeded,$player.credits < $bc_credits,"SetTooltip bc_salExplore2 ""You need at least $bc_credits credits.""
 SetTooltipHighlightColors bc_salExplore2 hColor
 SetTooltipHighlights bc_salExplore2 $bc_credits
@@ -224,12 +232,27 @@ $market.core_techMiningMult !=null
 $market.core_techMiningMult < 1","SetTooltip bc_salExplore2 ""Your team report that $market has been tech-mined before and 'removing' the ruins isn't possible.""
 SetEnabled bc_salExplore2 false",,,
 bc_salRuins_confirm,DialogOptionSelected,$option == bc_salExplore2,"AddRemoveCommodity credits -$bc_credits true
+AddRemoveCommodity crew -$bc_crews true
+AddRemoveCommodity heavy_machinery -$bc_heavymachinery true
+FireAll bc_RuinsExploreIfNeeded
 bc_techmine $bc_ruins
-$salvageLeaveText = ""I wanted it gone, no loot for me.""
-FireBest bc_RuinsExploreIfNeeded
-UpdateMemory","The pay delivered, the order issued. ""Not a single ruin is to be found here.""",5:bc_salExplore3:Continue,
-bc_salRuins_confirm2,DialogOptionSelected,$option == bc_salExplore3,"SalvageEntity showCost
+$bc_comeagain = true 1
+$bc_comeplease = true
+UpdateMemory","Pay delivered, orders issued. A day is required before seeing the results.
+
+""Not a single ruin is to be found here.""",5:bc_salRuins_leave:Continue,
+bc_salRuins_confirm2populate,PopulateOptions,$bc_comeplease,FireAll bc_DisableRuinsExploreIfNeeded2,,5:bc_salExplore3:See the strip-mine result of the ruins.,
+bc_salRuins_no,bc_DisableRuinsExploreIfNeeded2,$bc_comeagain,"SetTooltip bc_salExplore3 ""It hasn't been a day.""
+SetEnabled bc_salExplore3 false
+",,,
+bc_salRuins_no2,bc_DisableRuinsExploreIfNeeded2,"HostileFleetNearbyAndAware
+$bc_comeagain",SetEnabled bc_salExplore3 false,"A nearby hostile fleet is tracking your movements, making exploration of the planet impossible.",,
+bc_salRuins_confirm3,DialogOptionSelected,$option == bc_salExplore3,"bc_techmine bababooey bababooey bababooey
+$salvageLeaveText = ""I wanted it gone, no loot for me.""",Accidents were reported. The surviving team has been sent back to your fleet.,5:bc_salExplore4:Continue,
+bc_salRuins_confirm2,DialogOptionSelected,$option == bc_salExplore4,"SalvageEntity showCost
 FireAll PopulateSalvageOptions2",,,
+bc_salRuins_check5,bc_RuinsExploreIfNeeded,$bc_marines != null,"AddRemoveCommodity marines -$bc_marines true
+AddTextSmall ""The marines are deployed to ensure the decivilized subpopulation of $market do not interfere.""",,,
 bc_salRuins_check4,bc_RuinsExploreIfNeeded,"$bc_factionstring != null
 $bc_factionid != null",AdjustRep $bc_factionid HOSTILE -100,,,
 bc_salRuins_leave,DialogOptionSelected,$option == bc_salRuins_leave,FireAll PopulateOptions,,,
