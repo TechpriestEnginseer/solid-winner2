@@ -248,7 +248,8 @@ SetEnabled bc_salExplore3 false
 bc_salRuins_no2,bc_DisableRuinsExploreIfNeeded2,"HostileFleetNearbyAndAware
 $bc_comeagain",SetEnabled bc_salExplore3 false,"A nearby hostile fleet is tracking your movements, making exploration of the planet impossible.",,
 bc_salRuins_confirm3,DialogOptionSelected,$option == bc_salExplore3,"bc_techmine bababooey bababooey bababooey
-$salvageLeaveText = ""I wanted it gone, no loot for me.""",Accidents were reported. The surviving team has been sent back to your fleet.,5:bc_salExplore4:Continue,
+$salvageLeaveText = ""I wanted it gone, no loot for me.""
+unset $bc_comeplease",Accidents were reported. The surviving team has been sent back to your fleet.,5:bc_salExplore4:Continue,
 bc_salRuins_confirm2,DialogOptionSelected,$option == bc_salExplore4,"SalvageEntity showCost
 FireAll PopulateSalvageOptions2",,,
 bc_salRuins_check5,bc_RuinsExploreIfNeeded,$bc_marines != null,"AddRemoveCommodity marines -$bc_marines true

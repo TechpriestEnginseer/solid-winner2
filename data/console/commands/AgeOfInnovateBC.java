@@ -50,6 +50,7 @@ public class AgeOfInnovateBC implements BaseCommand {
                     String date = Global.getSector().getClock().getMonthString()+" "+Global.getSector().getClock().getCycleString();
                     if (Global.getSettings().getBoolean("BCIgnoreFactionWhiteflag")) {
                         for (FactionAPI faction : Global.getSector().getAllFactions()) {
+							if (Global.getSector().getPlayerFaction() == faction) continue;
                             for (MarketAPI market : Misc.getFactionMarkets(faction.getId())) {
                                 if (market != null && Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= (Global.getSector().getFaction(faction.getId()).getCustomBoolean("decentralized") ? Global.getSettings().getFloat("BCInnovatedDecentralized") : Global.getSettings().getFloat("BCInnovatedCentralized"))*market.getIndustries().size()) {
                                     if (Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= 1/Math.pow(2, Misc.getNumImprovedIndustries(market))) {
