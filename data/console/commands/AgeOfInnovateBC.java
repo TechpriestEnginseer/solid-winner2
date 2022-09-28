@@ -53,7 +53,7 @@ public class AgeOfInnovateBC implements BaseCommand {
 							if (Global.getSector().getPlayerFaction() == faction) continue;
                             for (MarketAPI market : Misc.getFactionMarkets(faction.getId())) {
                                 if (market != null && Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= (Global.getSector().getFaction(faction.getId()).getCustomBoolean("decentralized") ? Global.getSettings().getFloat("BCInnovatedDecentralized") : Global.getSettings().getFloat("BCInnovatedCentralized"))*market.getIndustries().size()) {
-                                    if (Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= 1/Math.pow(2, Misc.getNumImprovedIndustries(market))) {
+                                    if (Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= 1/Math.pow(Global.getSettings().getFloat("BCSPIndustryMultiplier"), Misc.getNumImprovedIndustries(market))) {
                                         WeightedRandomPicker<String> AmongUs = new WeightedRandomPicker<String>();
                                         for (Industry industry : market.getIndustries()) {
                                             if (industry.isImproved()) continue;
@@ -85,7 +85,7 @@ public class AgeOfInnovateBC implements BaseCommand {
                         for (String factionid : SupportedFaction) {
                              for (MarketAPI market : Misc.getFactionMarkets(factionid)) {
                                 if (market != null && Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= (Global.getSector().getFaction(factionid).getCustomBoolean("decentralized") ? Global.getSettings().getFloat("BCInnovatedDecentralized") : Global.getSettings().getFloat("BCInnovatedCentralized"))*market.getIndustries().size()) {
-                                    if (Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= 1/Math.pow(2, Misc.getNumImprovedIndustries(market)+1)) {
+                                    if (Misc.getRandom(Misc.genRandomSeed(), 1).nextFloat() <= 1/Math.pow(Global.getSettings().getFloat("BCSPIndustryMultiplier"), Misc.getNumImprovedIndustries(market)+1)) {
                                         WeightedRandomPicker<String> AmongUs = new WeightedRandomPicker<String>();
                                         for (Industry industry : market.getIndustries()) {
                                             if (industry.isImproved()) continue;

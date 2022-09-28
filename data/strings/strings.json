@@ -46,5 +46,12 @@
 		"TechMining16":"Reduces upkeep cost by %s. Reduces demand by %s unit. Increases finds by %s.",
 		"TechMining17":"Finds increased by %s.",
 		"TechMining18":"Increases finds by %s.",
+		
+		"LuddicContactTitle":"Donated Ship",
+		"LuddicContactTitle2":"Luddic Redemption",
+		
+		"Text":"This option will forcefully remove the Luddic Shrine and will bring resistance. The repercussions will be many. Your subordinates only await your final confirmation.",
+		"Yes":"Yes",
+		"Nevermind":"Never mind",
 	},
 }
