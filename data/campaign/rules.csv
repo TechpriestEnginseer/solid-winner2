@@ -25,7 +25,7 @@ bc_sleeper_intercept,DialogOptionSelected,"$option == marketVisitBar
 $market.isPlayerOwned
 !$market.bc_sleeper
 $market.ind:cryorevival
-#RollProbability 0.2","AddText ""Before you hit the bar, you receive a call to connect with an unknown number.""",,"bc_sleepercontinue:Call the strange number
+RollProbability 0.4","AddText ""Before you hit the bar, you receive a call to connect with an unknown number.""",,"bc_sleepercontinue:Call the strange number
 bc_sleeperno:Ignore the request",
 bc_sleeperyes,DialogOptionSelected,$option == bc_sleepercontinue,"bc_sleeper
 UpdateMemory
