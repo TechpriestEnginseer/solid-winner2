@@ -1,0 +1,13 @@
+fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
+timid_better_colonies_header,Whoa,Header,SETTINGS UPDATE ON GAME LOAD,,,,,
+BCChangeIndustrySize,Increase industry size.,Boolean,TRUE,,"When set to true, at Market Size 9 and 10, this will increase industry size by 1.",,,
+BCTechmining,Tech-Mining Tooltip,Boolean,TRUE,,"When set to true, a message about the tech-mining ruins will appear indicating how much potential it has left. Only appears on unowned planets or player-owned planets.",,,
+,,,,,,,,
+timid_better_colonies_header2,Whoa,Header,Age of Innovation Config,,,,,
+BCAutoImproveIndustry,Age of Innovation,Boolean,TRUE,,"When set to true, vanilla and whitelisted factions will auto-improve industries with SP over time.",,,
+BCIgnoreFactionWhiteflag,Age of Innovation Ignore Whitelist,Boolean,FALSE,,Makes ALL alive markets be eligible for SP Improvements regardless of whitelisted factions in data/config/BetterColonyConfig/bc_autospfactions.csv. There is no setting to make all industries eligible. The industries must be added data/config/BetterColoniesConfig/bc_autospindustries.csv.,,,
+BCLoseSPImprovements,(Nexerelin-Only) Invasions Destroy Improvements,Boolean,TRUE,,"When set to true and have the mod Nexerelin active, invasions will unimprove industries that were disrupted at the end of an invasion.",,,
+BCAgeOfInnovation,Age of Innovation Chance,Double,0.2,,Percentage of every month to spawn an Age of Innovation that will attempt to improve industries (default is 20%%).,0,1,
+BCInnovatedCentralized,Age of Innovation Chance on Centralized Factions,Double,0.05,,Percentage of every Age of Innovation event for centralized factions to decide to improve industries (default is 5%%).,0,1,
+BCInnovatedDecentralized,Age of Innovation Chance on Decentralized Factions,Double,0.02,,"Percentage of every Age of Innovation event for decentralized factions (Independents, Pirates, Pathers by vanilla examples) to decide to improve industries (default is 2%%).",0,1,
+BCSPIndustryMultiplier,Age of Innovation SP Exponential Multiplier Chance,Double,2,,"Similar to how multiple improvements for the same colony cost more for the player, multiple improvements for the same colony has a lower chance to proc. This is the exponential multiplier for auto-improvement chance based on 1/x^(# of sp industry). For example, a market with 0 SP industry gets a 1/2^0 chance of improving (default: 2, lower than 2 will increase chance, higher than 2 will decrease chance).",1,,

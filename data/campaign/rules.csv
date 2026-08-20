@@ -86,7 +86,7 @@ ShowDefaultVisual
 UpdateMemory
 EndConversation",,,
 ,,,,,,
-bc_luddicfaithbar_intercept,DialogOptionSelected,"$option == marketVisitBar
+#bc_luddicfaithbar_intercept,DialogOptionSelected,"$option == marketVisitBar
 $market.mc:habitable
 !$market.mc:pollution
 !$market.mc:bc_luddicfaith
@@ -97,15 +97,15 @@ $market.isPlayerOwned
 RepGTE luddic_church NEUTRAL
 $market.size >= 3","AddText ""Before you enter the bar, a comm link request pings you, the request contains a topic regarding faith..""",,"bc_luddicfaith:Receive the comm link
 bc_luddic_continue:Ignore",
-bc_luddicfaithbar_option1,DialogOptionSelected,$option == bc_luddicfaith,"bc_generateperson luddic_church
+#bc_luddicfaithbar_option1,DialogOptionSelected,$option == bc_luddicfaith,"bc_generateperson luddic_church
 AddText ""You accept the request.""
 AddText ""\""Greeting Captain $playerName, I am told you are the shepherd to the flock of $market.\""""
 AddText ""\""I pray for the safety of all good people who come to $market, but we can't expect Ludd to do all the work.\""""
 FireBest bc_luddicreputation",,"bc_luddicfaith2:""What are you asking?""",
-bc_luddicfaithbar_option1a,bc_luddicreputation,RepGTE luddic_church WELCOMING,"AddText ""\""You have been a good neighbor to the Church. We all go through periods of darkness. In such times, we can turn to Ludd, but it's good to also have friends.\""""",,,
-bc_luddicfaithbar_option1b,bc_luddicreputation,,"AddText ""\""A stranger to the Church you are. Nonetheless, I see great potential of you in the grand schemes of Ludd. I offer a way to foster relations between your flock and the Church.\""""",,,
-bc_luddicfaithbar_option1c,bc_luddicreputation,RepLTE luddic_church INHOSPITABLE,"AddText ""\""You are a heretic to many of the Luddic faith. I offer an olive branch, a path to redemption in the light of Ludd once more.\""""",,,
-bc_luddicfaithbar_option2,DialogOptionSelected,$option == bc_luddicfaith2,"AddTextSmall ""\""The blessing of Ludd brings wealth.\"""" gray
+#bc_luddicfaithbar_option1a,bc_luddicreputation,RepGTE luddic_church WELCOMING,"AddText ""\""You have been a good neighbor to the Church. We all go through periods of darkness. In such times, we can turn to Ludd, but it's good to also have friends.\""""",,,
+#bc_luddicfaithbar_option1b,bc_luddicreputation,,"AddText ""\""A stranger to the Church you are. Nonetheless, I see great potential of you in the grand schemes of Ludd. I offer a way to foster relations between your flock and the Church.\""""",,,
+#bc_luddicfaithbar_option1c,bc_luddicreputation,RepLTE luddic_church INHOSPITABLE,"AddText ""\""You are a heretic to many of the Luddic faith. I offer an olive branch, a path to redemption in the light of Ludd once more.\""""",,,
+#bc_luddicfaithbar_option2,DialogOptionSelected,$option == bc_luddicfaith2,"AddTextSmall ""\""The blessing of Ludd brings wealth.\"""" gray
 AddTextSmall ""\""Be fruitful and multiply, and fill the earth.\"""" gray
 AddTextSmall ""\""Ludd gives stability to the land by redemption.\"""" gray
 AddTextSmall ""\""There is a Path that seems right to man, but its end is the way of death.\"""" gray
@@ -117,16 +117,16 @@ AddText ""Withdrawing your pledge once honored will create some conflict."" high
 bc_luddicfaith3b:""I cannot honor that pledge.""
 bc_luddicfaith3c:""Look I don't know what you're talking about.""
 ",
-bc_luddicfaithbar_option3a,DialogOptionSelected,$option == bc_luddicfaith3a,"bc_generateperson
+#bc_luddicfaithbar_option3a,DialogOptionSelected,$option == bc_luddicfaith3a,"bc_generateperson
 FireBest bc_luddicreputationgain
 UpdateMemory","Enthusiasm follows the conversation. ""The road is a difficult one. You are the shepherd to your flock. Teach them well and virtue will follow. Sway them and vice will follow. Blessing of Ludd upon you.""","bc_luddic_continue:""Blessing upon you too.""",
-bc_luddicfaithbar_option3a1,bc_luddicreputationgain,,AdjustRep luddic_church FRIENDLY 10,,,
-bc_luddicfaithbar_option3a2,bc_luddicreputationgain,RepLTE luddic_church INHOSPITABLE,AdjustRep luddic_church NEUTRAL 100,,,
-bc_luddicfaithbar_option3b,DialogOptionSelected,$option == bc_luddicfaith3b,$market.bc_luddicfaith = true 365,"Disappointment follows the conversation. ""The road is a difficult one. I cannot compel you or your flock to follow the teachings of Ludd if they do not wish so. I can only pity for the possible sufferings that will occur. Blessing of Ludd upon you.""",bc_luddic_continue:Continue,
-bc_luddicfaithbar_option3c,DialogOptionSelected,$option == bc_luddicfaith3c,SetEnabled bc_luddicfaith3c false ,"A pause is given. ""I will simplify for your sake then. Pledging to enact a shrine will bring pilgrims who will boost the income of your market here in addition to population growth and stability. Some of the gifts the Church offers will depend on how cooperative you have been with them and in some cases we will assign a garrison here to overlook the shrine's protection."" 
+#bc_luddicfaithbar_option3a1,bc_luddicreputationgain,,AdjustRep luddic_church FRIENDLY 10,,,
+#bc_luddicfaithbar_option3a2,bc_luddicreputationgain,RepLTE luddic_church INHOSPITABLE,AdjustRep luddic_church NEUTRAL 100,,,
+#bc_luddicfaithbar_option3b,DialogOptionSelected,$option == bc_luddicfaith3b,$market.bc_luddicfaith = true 365,"Disappointment follows the conversation. ""The road is a difficult one. I cannot compel you or your flock to follow the teachings of Ludd if they do not wish so. I can only pity for the possible sufferings that will occur. Blessing of Ludd upon you.""",bc_luddic_continue:Continue,
+#bc_luddicfaithbar_option3c,DialogOptionSelected,$option == bc_luddicfaith3c,SetEnabled bc_luddicfaith3c false ,"A pause is given. ""I will simplify for your sake then. Pledging to enact a shrine will bring pilgrims who will boost the income of your market here in addition to population growth and stability. Some of the gifts the Church offers will depend on how cooperative you have been with them and in some cases we will assign a garrison here to overlook the shrine's protection."" 
 
 A serious tone presents itself. ""If you however find yourself at odds with the Church or some of the shrine's followers suspect you have been counterproductive with Ludd's teachings, let's say polluting the sweet atmosphere, being loose with border security, or installing agents of evil. There will be consequences.""",,
-bc_luddicfaithbar_continue,DialogOptionSelected,$option == bc_luddic_continue,"$option = marketVisitBar
+#bc_luddicfaithbar_continue,DialogOptionSelected,$option == bc_luddic_continue,"$option = marketVisitBar
 $market.bc_luddicfaith = true 365
 FireBest DialogOptionSelected",You head back to regular bar duties as the meeting is concluded.,,
 ,,,,,,
@@ -155,7 +155,7 @@ $market.mc:ruins_scattered
 $market.ruinsExplored
 !$core_techMiningMult","SetShortcut bc_salRuins_leave ""ESCAPE""
 $salvageSpecId = bc_ruins_scattered
-SetStoryOption bc_salExplore2 1 noRepPenaltyRaid ui_char_spent_story_point_industry ""Exploited the scattered ruins on $market""
+SetStoryOption bc_salExplore2 1 recoverOwnedShip ui_char_spent_story_point_industry ""Exploited the scattered ruins on $entityName""
 bc_techmine 500 160
 $bc_credits = 25,000 0
 $bc_ruins = ruins_scattered 0
@@ -174,7 +174,7 @@ $market.mc:ruins_widespread
 $market.ruinsExplored
 !$core_techMiningMult","SetShortcut bc_salRuins_leave ""ESCAPE""
 $salvageSpecId = bc_ruins_widespread
-SetStoryOption bc_salExplore2 2 noRepPenaltyRaid ui_char_spent_story_point_industry ""Exploited the widespread ruins on $market""
+SetStoryOption bc_salExplore2 1 recoverOwnedShip ui_char_spent_story_point_industry ""Exploited the widespread ruins on $entityName""
 bc_techmine 1000 330
 $bc_credits = 50,000 0
 $bc_ruins = ruins_widespread 0
@@ -193,7 +193,7 @@ $market.mc:ruins_extensive
 $market.ruinsExplored
 !$core_techMiningMult","SetShortcut bc_salRuins_leave ""ESCAPE""
 $salvageSpecId = bc_ruins_extensive
-SetStoryOption bc_salExplore2 3 noRepPenaltyRaid ui_char_spent_story_point_industry ""Exploited the extensive ruins on $market""
+SetStoryOption bc_salExplore2 2 recoverOwnedShip ui_char_spent_story_point_industry ""Exploited the extensive ruins on $entityName""
 bc_techmine 1500 500
 $bc_credits = 100,000 0
 $bc_ruins = ruins_extensive 0
@@ -212,7 +212,7 @@ $market.mc:ruins_vast
 $market.ruinsExplored
 !$core_techMiningMult","SetShortcut bc_salRuins_leave ""ESCAPE""
 $salvageSpecId = bc_ruins_vast
-SetStoryOption bc_salExplore2 5 noRepPenaltyRaid ui_char_spent_story_point_industry ""Exploited the vast ruins on $market""
+SetStoryOption bc_salExplore2 3 recoverOwnedShip ui_char_spent_story_point_industry ""Exploited the vast ruins on $entityName""
 bc_techmine 2000 660
 $bc_credits = 200,000 0
 $bc_ruins = ruins_vast 0
@@ -242,14 +242,14 @@ SetTooltipHighlightColors bc_salExplore2 hColor
 SetTooltipHighlights bc_salExplore2 $bc_marines
 SetEnabled bc_salExplore2 false",,,
 bc_salRuins_check3,bc_DisableRuinsExploreIfNeeded,"$bc_factionstring != null
-$bc_factionid != null","AddText ""$bc_factionstring has a claim on $market and continuing this order could likely make you hostile.""
+$bc_factionid != null","AddText ""$bc_factionstring has a claim on $entityName and continuing this order could likely make you hostile.""
 SetTextHighlightColors $bc_factioncolor bad
 SetTextHighlights $bc_factionstring hostile
 ",,,
 bc_salRuins_alreadyExplored,bc_DisableRuinsExploreIfNeeded,"$market.hasRuins
 $market.isPlanetConditionMarketOnly
 $market.core_techMiningMult !=null
-$market.core_techMiningMult < 1","SetTooltip bc_salExplore2 ""Your team report that $market has been tech-mined before and 'removing' the ruins isn't possible.""
+$market.core_techMiningMult < 1","SetTooltip bc_salExplore2 ""Your team report that $entityName has been tech-mined before and 'removing' the ruins isn't possible.""
 SetEnabled bc_salExplore2 false",,,
 bc_salRuins_confirm,DialogOptionSelected,$option == bc_salExplore2,"AddRemoveCommodity credits -$bc_credits true
 AddRemoveCommodity crew -$bc_crews true
@@ -274,36 +274,41 @@ $salvageSeed--
 SalvageEntity showCost
 FireAll PopulateSalvageOptions2",,,
 bc_salRuins_check5,bc_RuinsExploreIfNeeded,$bc_marines != null,"AddRemoveCommodity marines -$bc_marines true
-AddTextSmall ""The marines are deployed to ensure the decivilized subpopulation of $market do not interfere.""",,,
+AddTextSmall ""The marines are deployed to ensure the decivilized subpopulation of $entityName do not interfere.""",,,
 bc_salRuins_check4,bc_RuinsExploreIfNeeded,"$bc_factionstring != null
 $bc_factionid != null",AdjustRep $bc_factionid HOSTILE -50,,,
 bc_salRuins_leave,DialogOptionSelected,$option == bc_salRuins_leave,FireAll PopulateOptions,,,
 bc_sal_salvageOptionSelected,DialogOptionSelected,"$option == salPerform
-$bc_comeplease score:99","unset $bc_comeplease
+$bc_comeplease score:999999","unset $bc_comeplease
 SalvageEntity performSalvage
 FireBest PostSalvagePerform
 $salvageSeed = $bc_salvageSeed",,,
 ,,,,,,
-bc_convDefaultPreGreeting,PickGreeting,"$tag:bc_church
+bc_salRuins_information,PopulateOptions,"$market.isSurveyed
+$market.ruinsExplored
+!$bc_ruinedonce","bc_techmine2
+$bc_ruinedonce = true 0",,,
+,,,,,,
+#bc_convDefaultPreGreeting,PickGreeting,"$tag:bc_church
 !$bc_AlreadyContacted","ShowPersonVisual
 FireAll PopulateOptions","After a short wait, your connection request is accepted.
 
 ""Greetings captain, I am the commune leader for the shrine of $market. What can I do for you?""",,
-bc_PopLuddicOptions,PopulateOptions,"$tag:bc_church
+#bc_PopLuddicOptions,PopulateOptions,"$tag:bc_church
 !$bc_AlreadyContacted",,,0:bc_PopLuddic:Inquire on increasing relations with the shrine,
-bc_PopLuddicOptionsReply,DialogOptionSelected,"$option == bc_PopLuddic
+#bc_PopLuddicOptionsReply,DialogOptionSelected,"$option == bc_PopLuddic
 $tag:bc_church
 !$bc_AlreadyContacted","$bc_AlreadyContacted = true
 AddPotentialContact
 FireAll PopulateOptions","$HeOrShe smiles. ""Ludd was no stranger to the suffering and the poor. We will have work that can help this sector out of the wretchedness.""",,
-bc_convDefaultGreeting,PickGreeting,"$tag:bc_church
+#bc_convDefaultGreeting,PickGreeting,"$tag:bc_church
 $bc_AlreadyContacted","ShowPersonVisual
 FireAll PopulateOptions","After a short wait, your connection request is accepted.
 
 ""Greetings captain, I am the commune leader for the shrine of $market. What can we do for you?""",,
-bc_PopLuddicOptions2,PopulateOptions,"$tag:bc_church
+#bc_PopLuddicOptions2,PopulateOptions,"$tag:bc_church
 $bc_AlreadyContacted",bc_removecontact 1,,5:bc_PurgeShrine:Cast out the shrine,
-bc_PopLuddicOptionsReply2,DialogOptionSelected,"$option == bc_PurgeShrine
+#bc_PopLuddicOptionsReply2,DialogOptionSelected,"$option == bc_PurgeShrine
 $tag:bc_church","unset $bc_AlreadyContacted
 bc_removecontact
 AddTextSmall ""The vile acts caused upon the shrine completed. In which Ludd's followers face hardship and persecution at the hands of authorities on $market.""
@@ -311,32 +316,32 @@ AdjustRep luddic_church VENGEFUL -100
 $option = cutCommLink 0
 FireBest DialogOptionSelected",,,
 ,,,,,,
-bc_hmdfBlurb,bc_hmdf_blurb,,,"""A recent follower of the flock have donated a ship that we simply would not use. Perhaps you would use it.""",,
-bc_hmdfOfferOption,bc_hmdf_option,,,,bc_hmdf_start:Ask about the donated ship,
-bc_hmdfOfferTextContact,DialogOptionSelected,$option == bc_hmdf_start,"$missionId = bc_hmdf
+#bc_hmdfBlurb,bc_hmdf_blurb,,,"""A recent follower of the flock have donated a ship that we simply would not use. Perhaps you would use it.""",,
+#bc_hmdfOfferOption,bc_hmdf_option,,,,bc_hmdf_start:Ask about the donated ship,
+#bc_hmdfOfferTextContact,DialogOptionSelected,$option == bc_hmdf_start,"$missionId = bc_hmdf
 SetTextHighlights $bc_hmdf_price","""This $bc_hmdf_hullClass vessel has seen some light-years, but it'll fly. I could grant this to you for $bc_hmdf_price credits.""","bc_hmdf_look:Ask for detailed info on the ship
 contact_decline:Decline",
-bc_hmdfLookAtFreighter,DialogOptionSelected,$option == bc_hmdf_look,"Call $bc_hmdf_ref showShip
+#bc_hmdfLookAtFreighter,DialogOptionSelected,$option == bc_hmdf_look,"Call $bc_hmdf_ref showShip
 DoCanAffordCheck $bc_hmdf_price contact_accept false","$personName taps a few buttons to pull up the freighter schematics for your examination. ""For me, it's just taking up space, which is why I'm offering a reasonable price.""","contact_accept:Buy the ship for $bc_hmdf_price credits
 contact_decline:Decline",
-bc_hmdfPostAccept,ContactPostAccept,$missionId == bc_hmdf,"ShowPersonVisual
+#bc_hmdfPostAccept,ContactPostAccept,$missionId == bc_hmdf,"ShowPersonVisual
 RemoveCommodity credits $bc_hmdf_price
 AddShip $bc_hmdf_member
 Call $bc_hmdf_ref2 repSuccess
 Call $bc_hmdf_ref2 addContacts",,,
 ,,,,,,
-bclobBlurb,bclob_blurb,,,"""I believe I may be of service to your undesirable reputation standings from other factions.""",,
-bclobOfferOption,bclob_option,,,,bclob_start:Ask about the reputation fix,
-bclobLookAtFaction,DialogOptionSelected,$option == bclob_start,"$missionId = bclob
+#bclobBlurb,bclob_blurb,,,"""I believe I may be of service to your undesirable reputation standings from other factions.""",,
+#bclobOfferOption,bclob_option,,,,bclob_start:Ask about the reputation fix,
+#bclobLookAtFaction,DialogOptionSelected,$option == bclob_start,"$missionId = bclob
 SetTextHighlights $bclob_faction $bclob_price $bclob_faction
 DoCanAffordCheck $bclob_price contact_accept false","$personName taps a few buttons to pull up the bounty board. ""I see that the $bclob_faction have put a price on your head, yet I sense that you are a good person. If you wish, for a donation of $bclob_price, I will send a message to the leaders of the $bclob_faction and they should seek a more positive understanding of you upon my recommendation.""","contact_accept:Accept the message of recommendation for $bclob_price credits
 contact_decline:Decline",
-bclobLookAtFaction2,DialogOptionSelected,"$option == bclob_start
+#bclobLookAtFaction2,DialogOptionSelected,"$option == bclob_start
 $player.atrocities > 0","$missionId = bclob
 SetTextHighlights $bclob_faction $bclob_price $bclob_faction
 DoCanAffordCheck $bclob_price contact_accept false","$personName taps a few buttons to pull up the bounty board. ""I see that the $bclob_faction have put a price on your head, yet I somewhat sense that you are a good person despite your past actions. If you wish, for a donation of $bclob_price, I will send a message to the leaders of the $bclob_faction and they should seek a more positive understanding of you upon my recommendation.""","contact_accept:Accept the message of recommendation for $bclob_price credits
 contact_decline:Decline",
-bclobPostAccept,ContactPostAccept,$missionId == bclob,"ShowPersonVisual
+#bclobPostAccept,ContactPostAccept,$missionId == bclob,"ShowPersonVisual
 RemoveCommodity credits $bclob_price
 AdjustRep $bclob_factionid SUSPICIOUS 100
 Call $bclob_ref2 repSuccess
