@@ -1,0 +1,31 @@
+1.9
+* Updated for 0.98a
+* Removed Cryosanctum and Tech-Mining Modification (breaks saves that are pre-1.9 but can work in saves without)
+* Added Ruins Integrity Tooltip when you dock at anything with ruins (Usually will not appear when a ruin is 100% integrity).
+* LunaLib compatibility and settings config
+
+1.88
+* Updated for 0.97a
+
+1.87
+* removed luddic shrine
+* reduced SP Cost for "extracting ruins" (1/2/3/5 -> 1/1/2/3)
+* updated for 0.96a-RC10
+
+1.84
+* Fixed Age of Innovation affecting the player market
+* Fixed Luddic Shrine spawning fleets when the Luddic Church is no longer active.
+
+1.83
+* Reworked exploiting ruins a bit to fix an annoying bug involving carbon-copy duplicate loots.
+* You will lose the number of crews, heavy machinery, and marines (if applicable) which will be returned after a day.
+* Credit cost reduced to compensate. Some Marine XP rewarded (if applicable).
+
+1.82
+* Added new command: innovateBC, which will simulate an Age of Innovation event.
+* Fixed pestering Luddic shrine missionaries from being ignored.
+
+1.81
+* Fixed bug with IndEvo interaction involving eating ruins.
+* Fixed bug where you could eat ruins multiple times.
+* Recalculated the Age of Innovation event (more to proc, less markets affected; overall the same)
