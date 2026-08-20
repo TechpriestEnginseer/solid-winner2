@@ -3,7 +3,7 @@
     "name": "Better Colonies",
     "author": "Timid",
     "utility": "false",
-    "version": "1.9",
+    "version": "1.91",
     "description": "QoL for Late Game Colony Management. Simple as.",
     "gameVersion": "0.98a-RC10",
 	"jars":["jar/Bettercolonies.jar"],

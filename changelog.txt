@@ -1,3 +1,7 @@
+1.91
+* Fixed an uncommon CTD case
+* Reduced the weighting of AI preferring to upgrade their Spaceport and Megaport.
+
 1.9
 * Updated for 0.98a
 * Removed Cryosanctum and Tech-Mining Modification (breaks saves that are pre-1.9 but can work in saves without)

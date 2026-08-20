@@ -6,9 +6,9 @@
 	{
 		"major":1,
 		"minor":9,
-		"patch":0,
+		"patch":1,
 	},
 	"starsectorVersion":"0.98a-RC10",
-	"directDownloadURL":"https://github.com/TechpriestEnginseer/solid-winner2/releases/download/1.9/Better.Colonies.zip",
+	"directDownloadURL":"https://github.com/TechpriestEnginseer/solid-winner2/releases/download/1.91/Better.Colonies.zip",
 	"changelogURL":"https://raw.githubusercontent.com/TechpriestEnginseer/solid-winner2/master/changelog.txt",
 }
